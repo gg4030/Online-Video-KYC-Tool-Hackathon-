@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online KYC</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginPage">
+            <h1>Login</h1>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegistrationPage()">Register</a></p>
+        </div>
+
+        <div id="registrationPage" style="display: none;">
+            <h1>Register</h1>
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+        </div>
+
+        <div id="kycPage" style="display: none;">
+            <h1>Online KYC Verification</h1>
+            <input type="file" id="documentUpload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            <button onclick="startKYCVerification()">Start KYC Verification</button>
+            <button onclick="startCamera()">Start Camera</button>
+            <video id="videoElement" autoplay style="display: none;"></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
